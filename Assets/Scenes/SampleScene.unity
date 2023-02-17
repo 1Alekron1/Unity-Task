@@ -134,10 +134,10 @@ GameObject:
   - component: {fileID: 49868198}
   - component: {fileID: 49868204}
   - component: {fileID: 49868203}
-  - component: {fileID: 49868202}
   - component: {fileID: 49868201}
   - component: {fileID: 49868200}
-  - component: {fileID: 49868199}
+  - component: {fileID: 49868205}
+  - component: {fileID: 49868206}
   m_Layer: 0
   m_Name: PieceRope 6
   m_TagString: Untagged
@@ -160,18 +160,6 @@ Transform:
   m_Father: {fileID: 558454222}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &49868199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49868197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20ea4bf70325a946811d99b2b94c3a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!233 &49868200
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -222,18 +210,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.26666668, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &49868202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49868197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0fc5445e2649e6aa338ed4ff417ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &49868203
 Rigidbody2D:
   serializedVersion: 4
@@ -307,6 +283,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &49868205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49868197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954dc8abf68f4d0597144ef407b2fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &49868206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49868197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed84fe270c7849f193d6c8128cc37a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &153358996
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,10 +533,10 @@ GameObject:
   - component: {fileID: 250684916}
   - component: {fileID: 250684920}
   - component: {fileID: 250684919}
-  - component: {fileID: 250684917}
   - component: {fileID: 250684921}
   - component: {fileID: 250684922}
   - component: {fileID: 250684923}
+  - component: {fileID: 250684924}
   m_Layer: 0
   m_Name: PieceRope 6
   m_TagString: Untagged
@@ -559,18 +559,6 @@ Transform:
   m_Father: {fileID: 951968056}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &250684917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250684915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b0fc5445e2649e6aa338ed4ff417ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &250684919
 Rigidbody2D:
   serializedVersion: 4
@@ -703,7 +691,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 250684915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20ea4bf70325a946811d99b2b94c3a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 954dc8abf68f4d0597144ef407b2fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &250684924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250684915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed84fe270c7849f193d6c8128cc37a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &382014394
@@ -1399,9 +1399,10 @@ GameObject:
   - component: {fileID: 711137911}
   - component: {fileID: 711137910}
   - component: {fileID: 711137913}
-  - component: {fileID: 711137917}
   - component: {fileID: 711137918}
   - component: {fileID: 711137919}
+  - component: {fileID: 711137921}
+  - component: {fileID: 711137922}
   m_Layer: 0
   m_Name: Main Character
   m_TagString: Untagged
@@ -1497,18 +1498,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &711137917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711137909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d98fbe755534344b3b1209c269a292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &711137918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1549,6 +1538,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsJoined: 1
   CoolDown: 0
+--- !u!114 &711137921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711137909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec1165c593c443bae2517e3b8d1779b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711137922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711137909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed84fe270c7849f193d6c8128cc37a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &951968055
 GameObject:
   m_ObjectHideFlags: 0

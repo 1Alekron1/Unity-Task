@@ -8,24 +8,25 @@ namespace DefaultNamespace
         public int CoolDown;
         private Player _player;
         private Rigidbody2D _rigidbody2D;
-        void Start()
+
+        private void Start()
         {
             _player = GetComponent<Player>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
         }
-        
-        void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (_player.IsJoined)
-                    _rigidbody2D.gravityScale /= 1.5f;
-                _player.IsJoined = false;
-                _player.CoolDown = 100;
-            }
 
+        private void Update()
+        {
             if (_player.CoolDown > 0)
                 _player.CoolDown -= 1;
+        }
+
+        public void UnhookPlayer()
+        {
+            if (_player.IsJoined)
+                _rigidbody2D.gravityScale /= 1.5f;
+            _player.IsJoined = false;
+            _player.CoolDown = 100;
         }
     }
 }
