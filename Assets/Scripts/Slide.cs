@@ -43,16 +43,18 @@ public class Slide : MonoBehaviour
         _targetVelocity = alongSurface * _speed;
 
         if (Input.GetKeyDown(KeyCode.Space) && _grounded)
-        {
-            _velocity.y = _jumpAcceleration;
-        }
+            Jump();
+    }
+
+    private void Jump()
+    {
+        _velocity.y = _jumpAcceleration;
     }
 
     private void FixedUpdate()
     {
         _velocity += _gravityModifier * Physics2D.gravity * Time.deltaTime;
         _velocity.x = _targetVelocity.y;
-
 
         _grounded = false;
 
