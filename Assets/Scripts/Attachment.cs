@@ -5,6 +5,7 @@ namespace DefaultNamespace
     public class Attachment : MonoBehaviour
     {
         private HingeJoint2D _hingeJoint2D;
+        private float _gravityReduction = 1.5f;
 
         private void Start()
         {
@@ -15,7 +16,7 @@ namespace DefaultNamespace
         {
             var player = other.GetComponent<Player>();
 
-            if (!player.IsJoined && player.CoolDown == 0)
+            if (!player.IsJoined && player.CoolDownCounter == 0)
                 AttachTo(other);
         }
 
@@ -25,7 +26,7 @@ namespace DefaultNamespace
             _hingeJoint2D.connectedBody = rigidbody;
             player.GetComponent<Player>().IsJoined = true;
             _hingeJoint2D.enabled = true;
-            rigidbody.gravityScale *= 1.5f;
+            rigidbody.gravityScale *= _gravityReduction;
         }
     }
 }

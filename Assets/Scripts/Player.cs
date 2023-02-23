@@ -5,9 +5,11 @@ namespace DefaultNamespace
     public class Player : MonoBehaviour
     {
         public bool IsJoined = true;
-        public int CoolDown;
+        public int CoolDownCounter;
         private Player _player;
         private Rigidbody2D _rigidbody2D;
+        private int _coolDownTime = 100;
+        private float _gravityReduction = 1.5f;
 
         private void Start()
         {
@@ -17,16 +19,16 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            if (_player.CoolDown > 0)
-                _player.CoolDown -= 1;
+            if (_player.CoolDownCounter > 0)
+                _player.CoolDownCounter -= 1;
         }
 
         public void UnhookPlayer()
         {
             if (_player.IsJoined)
-                _rigidbody2D.gravityScale /= 1.5f;
+                _rigidbody2D.gravityScale /= _gravityReduction;
             _player.IsJoined = false;
-            _player.CoolDown = 100;
+            _player.CoolDownCounter = _coolDownTime;
         }
     }
 }

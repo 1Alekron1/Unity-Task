@@ -6,7 +6,9 @@ namespace DefaultNamespace
     {
         private Rigidbody2D _rigidbody2D;
         private Player _player;
-
+        private float _criticalVelocity = 3.5f;
+        private float _power = 0.5f;
+        private float _speed = 4.5f;
         private void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -24,23 +26,23 @@ namespace DefaultNamespace
             var velocity = _rigidbody2D.velocity;
             var velocityX = velocity.x;
             var velocityY = velocity.y;
-            if (velocityX < 3.5 && velocityX > -3.5)
+            if (velocityX < _criticalVelocity && velocityX > -_criticalVelocity)
             {
                 if (velocityX > 0 && velocityY > 0)
-                    AddForce(0.5f, 0.5f);
+                    AddForce(_power, _power);
                 else if (velocityX < 0 && velocityY < 0)
-                    AddForce(-0.5f, -0.5f);
+                    AddForce(-_power, -_power);
                 else if (velocityX < 0 && velocityY > 0)
-                    AddForce(-0.5f, 0.5f);
+                    AddForce(-_power, _power);
                 else if (velocityX > 0 && velocityY < 0)
-                    AddForce(0.5f, -0.5f);
+                    AddForce(_power, -_power);
             }
         }
 
         private void AddForce(float x, float y)
         {
-            var speed = 4.5f;
-            _rigidbody2D.AddForce(new Vector2(x, y) * speed);
+            
+            _rigidbody2D.AddForce(new Vector2(x, y) * _speed);
         }
     }
 }
